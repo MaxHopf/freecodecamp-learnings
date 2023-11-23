@@ -1,0 +1,99 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Reminder Study</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+
+        <h1 id="title">Reminded by your phone</h1>
+        <p id="description">You are using your phone to set reminders for tasks and events? We want to hear your
+            experience.</p>
+
+        <form id="survey-form">
+
+            <fieldset>
+                <legend>What smartphone operating system do you use primary?</legend>
+                <label for="android">Android
+                    <input id="android" type="radio" name="os" value="android">
+                </label>
+                <label for="ios">iOS
+                    <input id="ios" type="radio" name="os" value="ios">
+                </label>
+                <label for="windows">Windows
+                    <input id="windows" type="radio" name="os" value="windows">
+                </label>
+                <label for="other">Other
+                    <input id="other" type="radio" name="os" value="other">
+                    <input id="otheros" type="text" name="os" placeholder="operation system...">
+                </label>
+                <label for="none">I don't use a smartphone
+                    <input id="none" type="radio" name="os" value="none">
+                </label>
+                <label for="knowledge">I don't know
+                    <input id="knwoledge" type="radio" name="os" value="knowledge">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>How many application do you have installed on your phone?</legend>
+                <label for="number" id="number-label"> Dummy text <input id="number" type="number" min="1" max="9999"
+                        placeholder="Amount"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend> Do you use your phone to set reminders for upcoming tasks or events such as birthdays,
+                    meetings, or appointments?"</legend>
+                <label for="dropdown">
+                    <select id="dropdown">
+                        <option value="">(Please select)</option>
+                        <option value="yes">yes</option>
+                        <option value="no">no</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Which of the following applications are you using for managing your tasks and events?</legend>
+                <label for="googleCalendar">
+                    <input id="googleCalendar" type="checkbox" name="googleCalendar" value="googleCalendar">Google
+                    Calendar
+                </label>
+                <label for="protonCalendar">
+                    <input id="protonCalendar" type="checkbox" name="protonCalendar" value="protonCalendar">Proton
+                    Calendar
+                </label>
+                <label for="other">
+                    <input id="other" type="checkbox" name="other" value="other">I'm using another app called <input
+                        id="alternative" type="text" name="alternative" placeholder="application...">
+                </label>
+                <label for="none">
+                    <input id="none" type="checkbox" name="none" value="none">I'm not using any application.
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Do you mind to share some information to keep in touch?</legend>
+                <label for="name" id="name-label">Name<input required id="name" type="text"
+                        placeholder="How should we call you?"></label>
+
+                <label for="email" id="email-label">Email<input required id="email" type="email"
+                        placeholder="How can we keep in touch?"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>How do you make sure that you don't miss any important event or appointment?</legend>
+                <textarea id="" name="" rows="7" cols="100" placeholder="Describe your strategy..."></textarea>
+            </fieldset>
+
+            <input type="submit" id="submit">
+        </form>
+    </main>
+</body>
+
+</html>
