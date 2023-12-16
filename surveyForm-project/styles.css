@@ -1,3 +1,13 @@
+/*Global Variables*/
+:root {
+    --Text-color: #292A3F;
+    --color-dark: #292a3f;
+    --color-primary-light: #f0ebf8;
+    --color-primary-dark: #5D32A3;
+    --transparent: rgba(0, 0, 0, 0);
+    --container-gap: 24px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,82 +16,61 @@
     font: inherit;
     vertical-align: baseline;
     font-family: 'Roboto', sans-serif;
-    font-family: 'Share Tech Mono', monospace;
-    font-family: 'VT323', monospace;
-    --Text-color: #292A3F;
-    --color-dark: #292a3f;
-    --transparent: rgba(0, 0, 0, 0);
 }
 
+/*Typography Styles*/
+.roboto-24px {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--Text-color, #292A3F);
+}
+
+/*Body Styles*/
 body {
-    background-color: #F0EBF8;
+    /*Layout*/
     display: inline-flex;
     padding: 0px 248px;
     justify-content: center;
     align-items: center;
-    color: var(--Text-color, #292A3F);
-    font-family: Roboto;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    /* 116.667% */
+    /*Style*/
+    background-color: var(--color-primary-light);
 }
 
-.main-container,
+/*Main Styles of container layout*/
+main {
+    /*Layout*/
+    display: flex;
+    flex-direction: column;
+    gap: var(--container-gap);
+    padding: 32px 0px;
+}
+
+/*Form Styles*/
 form {
     /*Layout*/
     display: flex;
-    padding: 16px 0px 64px 0px;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
-    /*Typography*/
-    color: var(--Text-color, #292A3F);
-    font-family: Roboto;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-}
-
-.header-container {
-    /*Layout*/
-    display: flex;
-    width: 944px;
-    padding: 48px 32px;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    /*Style*/
-    border-radius: 16px;
-    background: #FAFAFA;
+    gap: var(--container-gap);
 }
 
 h1 {
     /*Layout*/
     align-self: stretch;
     /*Typography*/
-    color: var(--Text-color);
-    font-family: Roboto;
     font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 48px;
-    /* 120% */
 }
 
 h2 {
     /*Layout*/
     align-self: stretch;
     /*Typography*/
-    color: var(--Text-color, #292A3F);
-    font-family: Roboto;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 28px;
-    /* 116.667% */
 }
 
 p {
@@ -97,20 +86,97 @@ p {
     /* 120% */
 }
 
-.question-container {
+.container {
     /*Layout*/
     display: flex;
-    width: 944px;
-    padding: 24px 32px;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
-    gap: 32px;
+    justify-content: center;
+    width: 944px;
     /*Style*/
     border-radius: 16px;
     background: #FAFAFA;
+
 }
 
+.header-container {
+    /*Layout*/
+    padding: 48px 32px;
+    gap: 16px;
+}
+
+.question-container {
+    /*Layout*/
+    padding: 24px 32px;
+    gap: 24px;
+}
+
+/* ################################# Textarea  Style ################################# */
+
+textarea {
+    /*Layout*/
+    display: flex;
+    padding: 8px 4px;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    /*Style*/
+    border-bottom: 1px solid var(--Dark, #292A3F);
+    background: #F0EBF8;
+}
+
+.text-input {
+    /*Layout*/
+    display: flex;
+    width: 271px;
+    padding: 2px 4px;
+    align-items: center;
+    gap: 4px;
+    /*Style*/
+    border: none;
+    border-bottom: 1px solid var(--color-dark);
+    background: #F0EBF8;
+
+}
+
+/* ################################# Submit Button Style ################################# */
+
+#submit {
+    /*Layout*/
+    display: flex;
+    padding: 16px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    /*Style*/
+    border-radius: 8px;
+    background: var(--color-primary-dark);
+    /*Typography*/
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    /* 100% */
+}
+
+/* ################################# Select Button Style ################################# */
+
+.select-button {
+    /*Layout*/
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    /*Style*/
+    border-radius: 8px;
+    border: 1px solid #25242D;
+    background: #F0EBF8;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 
 /* ################################# Radio Button Style ################################# */
@@ -148,26 +214,6 @@ p {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-.text-input {
-    /*Layout*/
-    display: flex;
-    width: 271px;
-    padding: 2px 4px;
-    align-items: center;
-    gap: 4px;
-    /*Style*/
-    border: none;
-    border-bottom: 1px solid var(--color-dark);
-    background: #F0EBF8;
-    /*Typography*/
-    color: var(--Text-color);
-    font-family: Roboto;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
 }
 
 /* Hide the browser's default radio button but not .text-input class */
@@ -225,31 +271,6 @@ p {
     background: var(--color-dark);
 }
 
-
-
-/* ############################ */
-
-select {
-    /*Layout*/
-    display: flex;
-    align-items: center;
-    padding: 8px 16px;
-    /*Style*/
-    border-radius: 8px;
-    border: 1px solid #25242D;
-    background: #F0EBF8;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    /*Typography*/
-    font-family: Roboto;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-}
-
-
 /* ################################# Checkbox Style ################################# */
 
 
@@ -305,47 +326,4 @@ select {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-}
-
-
-
-
-textarea {
-    /*Layout*/
-    display: flex;
-    padding: 8px 4px;
-    align-items: center;
-    gap: 4px;
-    align-self: stretch;
-    /*Style*/
-    border-bottom: 1px solid var(--Dark, #292A3F);
-    background: #F0EBF8;
-    /*Typography*/
-    color: var(--Text-color);
-    font-family: Roboto;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-}
-
-#submit {
-    /*Layout*/
-    display: flex;
-    padding: 16px 0px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    align-self: stretch;
-    /*Style*/
-    border-radius: 8px;
-    background: #5D32A3;
-    /*Typography*/
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
-    /* 100% */
 }

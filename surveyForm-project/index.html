@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <main class="main-container">
-        <header class="header-container">
+    <main>
+        <header class=" container header-container">
             <h1 id="title">Reminded by your phone</h1>
             <p id="description">
                 You are using your phone to set reminders for tasks and events? We want to hear your
@@ -25,7 +25,7 @@
 
         <form id="survey-form">
 
-            <section class="question-container">
+            <section class="container question-container">
                 <h2>What smartphone operating system do you use primary?</h2>
                 <div class="radio-list">
                     <label for="android" class="radio-item">
@@ -62,17 +62,17 @@
                 </div>
             </section>
 
-            <section class="question-container">
+            <section class="container question-container">
                 <h2>How many application do you have installed on your phone?</h2>
-                <label for="number" id="number-label"><input class="text-input" id="number" type="number" min="1"
-                        max="9999" placeholder="Type your answer..."></label>
+                <label for="number" id="number-label"><input class="roboto-24px text-input" id="number" type="number"
+                        min="1" max="9999" placeholder="Type your answer..."></label>
             </section>
 
-            <section class="question-container">
+            <section class="container question-container">
                 <h2> Do you use your phone to set reminders for upcoming tasks or events such as birthdays,
                     meetings, or appointments?"</h2>
                 <label for="dropdown" class="custom-select" style="width: 200px;">
-                    <select id="dropdown">
+                    <select class="roboto-24px select-button" id="dropdown">
                         <option value="none">
                             <p>Select your answer</p> <i class="fas fa-chevron-down"></i>
                         </option>
@@ -82,7 +82,7 @@
                 </label>
             </section>
 
-            <section class="question-container">
+            <section class="container question-container">
                 <h2>Which of the following applications are you using for managing your tasks and events?
                 </h2>
                 <div class="check-list">
@@ -112,21 +112,21 @@
                 </div>
             </section>
 
-            <section class="question-container">
+            <section class="container question-container">
                 <h2>How do you make sure that you don't miss any important event or appointment?</h2>
-                <textarea id="myTextarea" rows="1" name="" placeholder="Describe your strategy..."></textarea>
+                <textarea class="roboto-24px" id="myTextarea" rows="1" name=""
+                    placeholder="Describe your strategy..."></textarea>
 
             </section>
 
-            <section class="question-container">
+            <section class="container question-container">
                 <h2>Do you mind to share some information to keep in touch?</h2>
-                <label for="name" id="name-label"><input class="text-input" required id="name" type="text"
+                <label for="name" id="name-label"><input class="roboto-24px text-input" required id="name" type="text"
                         placeholder="Your Name"></label>
 
-                <label for="email" id="email-label"><input class="text-input" required id="email" type="email"
-                        placeholder="Your Email address"></label>
+                <label for="email" id="email-label"><input class="roboto-24px text-input" required id="email"
+                        type="email" placeholder="Your Email address"></label>
             </section>
-
 
             <input type="submit" id="submit">
         </form>
